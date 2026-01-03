@@ -1,0 +1,81 @@
+// File generated from our OpenAPI spec by Stainless.
+
+package com.mapquest.api.models.users
+
+import kotlin.jvm.optionals.getOrNull
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Test
+
+internal class UserUpdateParamsTest {
+
+    @Test
+    fun create() {
+        UserUpdateParams.builder()
+            .existingUsername("username")
+            .user(
+                User.builder()
+                    .id(10L)
+                    .email("john@email.com")
+                    .firstName("John")
+                    .lastName("James")
+                    .password("12345")
+                    .phone("12345")
+                    .username("theUser")
+                    .userStatus(1)
+                    .build()
+            )
+            .build()
+    }
+
+    @Test
+    fun pathParams() {
+        val params = UserUpdateParams.builder().existingUsername("username").build()
+
+        assertThat(params._pathParam(0)).isEqualTo("username")
+        // out-of-bound path param
+        assertThat(params._pathParam(1)).isEqualTo("")
+    }
+
+    @Test
+    fun body() {
+        val params =
+            UserUpdateParams.builder()
+                .existingUsername("username")
+                .user(
+                    User.builder()
+                        .id(10L)
+                        .email("john@email.com")
+                        .firstName("John")
+                        .lastName("James")
+                        .password("12345")
+                        .phone("12345")
+                        .username("theUser")
+                        .userStatus(1)
+                        .build()
+                )
+                .build()
+
+        val body = params._body().getOrNull()
+
+        assertThat(body)
+            .isEqualTo(
+                User.builder()
+                    .id(10L)
+                    .email("john@email.com")
+                    .firstName("John")
+                    .lastName("James")
+                    .password("12345")
+                    .phone("12345")
+                    .username("theUser")
+                    .userStatus(1)
+                    .build()
+            )
+    }
+
+    @Test
+    fun bodyWithoutOptionalFields() {
+        val params = UserUpdateParams.builder().existingUsername("username").build()
+
+        val body = params._body().getOrNull()
+    }
+}

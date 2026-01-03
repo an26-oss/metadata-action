@@ -1,23 +1,7 @@
+.prism.log
+.gradle
 .idea
-cmd/github-mcp-server/github-mcp-server
-
-# VSCode
-.vscode/*
-!.vscode/launch.json
-
-# Added by goreleaser init:
-dist/
-__debug_bin*
-
-# Go
-vendor
-bin/
-
-# macOS
-.DS_Store
-
-# binary
-github-mcp-server
-
-.history
-conformance-report/
+.kotlin
+build/
+codegen.log
+kls_database.db
