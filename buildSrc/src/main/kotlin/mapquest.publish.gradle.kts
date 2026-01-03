@@ -11,7 +11,7 @@ configure<PublishingExtension> {
             pom {
                 name.set("OpenAPI 3.0 Pet Store")
                 description.set("This is a sample Pet Store Server based on the OpenAPI 3.0 specification.")
-                url.set("https://www.github.com/an26-oss/github-mcp-server")
+                url.set("https://www.github.com/an26-oss/metadata-action")
 
                 licenses {
                     license {
@@ -26,9 +26,9 @@ configure<PublishingExtension> {
                 }
 
                 scm {
-                    connection.set("scm:git:git://github.com/an26-oss/github-mcp-server.git")
-                    developerConnection.set("scm:git:git://github.com/an26-oss/github-mcp-server.git")
-                    url.set("https://github.com/an26-oss/github-mcp-server")
+                    connection.set("scm:git:git://github.com/an26-oss/metadata-action.git")
+                    developerConnection.set("scm:git:git://github.com/an26-oss/metadata-action.git")
+                    url.set("https://github.com/an26-oss/metadata-action")
                 }
 
                 versionMapping {
