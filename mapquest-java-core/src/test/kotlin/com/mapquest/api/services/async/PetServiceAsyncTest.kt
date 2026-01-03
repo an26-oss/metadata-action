@@ -10,6 +10,7 @@ import com.mapquest.api.models.pets.PetFindByStatusParams
 import com.mapquest.api.models.pets.PetFindByTagsParams
 import com.mapquest.api.models.pets.PetUpdateByIdParams
 import com.mapquest.api.models.pets.PetUploadImageParams
+import com.mapquest.api.models.pets.Tag
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -35,7 +36,7 @@ internal class PetServiceAsyncTest {
                     .id(10L)
                     .category(Category.builder().id(1L).name("Dogs").build())
                     .status(Pet.Status.AVAILABLE)
-                    .addTag(Pet.Tag.builder().id(0L).name("name").build())
+                    .addTag(Tag.builder().id(0L).name("name").build())
                     .build()
             )
 
@@ -77,7 +78,7 @@ internal class PetServiceAsyncTest {
                     .id(10L)
                     .category(Category.builder().id(1L).name("Dogs").build())
                     .status(Pet.Status.AVAILABLE)
-                    .addTag(Pet.Tag.builder().id(0L).name("name").build())
+                    .addTag(Tag.builder().id(0L).name("name").build())
                     .build()
             )
 
